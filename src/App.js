@@ -12,12 +12,12 @@ import { useState, useEffect } from 'react';
 
 const App = () => {
   const [loading, setLoading] = useState(false);
-  // useEffect(()=>{
-  //   setLoading(true);
-  //   setTimeout(()=>{
-  //     setLoading(false)
-  //   }, 5000)
-  // },[])
+  useEffect(()=>{
+    setLoading(true);
+    setTimeout(()=>{
+      setLoading(false)
+    }, 5000)
+  },[])
   return (
     <>
     {loading?<Loader />:
