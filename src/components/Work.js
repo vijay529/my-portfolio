@@ -39,11 +39,8 @@ const Work = () => {
                 <p>React - firebase</p>
               </div>
               <div className="w_pLink">
-                {/* <div className="button">
-                  <a href="/" >preview</a>
-                </div> */}
                 <div className="button">
-                  <a href="https://github.com/vijay529/linkedin_clone" target={'_blank'}>git</a>
+                  <a href="https://github.com/vijay529/linkedin_clone.git" target={'_blank'}>git</a>
                 </div>
               </div>
             </div>
@@ -73,9 +70,6 @@ const Work = () => {
                 <p>MongoDB - Express - React - Node </p>
               </div>
               <div className="w_pLink">
-                {/* <div className="button">
-                  <a href="/" >preview</a>
-                </div> */}
                 <div className="button">
                   <a href="https://github.com/vijay529/booking_app" target={'_blank'}>git</a>
                 </div>
@@ -105,7 +99,10 @@ const Work = () => {
               </div>
               <div className="w_pLink">
                 <div className="button">
-                  <a href="/" >preview</a>
+                  <a href="https://vijay529.github.io/my-portfolio/" target={'_blank'}>preview</a>
+                </div>
+                <div className="button">
+                  <a href="https://github.com/vijay529/my-portfolio.git" target={'_blank'}>git</a>
                 </div>
               </div>
             </div>
@@ -132,9 +129,9 @@ const Work = () => {
                 <p>HTML - CSS - Rest API - React </p>
               </div>
               <div className="w_pLink">
-                {/* <div className="button">
-                  <a href="/" >preview</a>
-                </div> */}
+                <div className="button">
+                  <a href="https://vijay529.github.io/movie-app/" target={'_blank'}>preview</a>
+                </div>
                 <div className="button">
                   <a href="https://github.com/vijay529/movie-app" target={'_blank'}>git</a>
                 </div>

@@ -1,24 +1,27 @@
-import React from 'react'
+import React, { useState } from 'react'
 import emailico from '../assets/envelope.svg';
 import linkedico from '../assets/linkedico.svg';
 import gitico from '../assets/gitico.svg';
 import Reveal from './Reveal';
 import emailjs from '@emailjs/browser';
 import { useRef } from 'react';
-
+import loader from '../assets/Spinner-1s-200px.svg'
 
 const Contact = () => {
   const form = useRef();
+  const [loading, setloading] = useState(false)
 
   const sendEmail = (e) => {
     e.preventDefault();
-
+    setloading(true)
     emailjs.sendForm('service_iby358a', 'template_mjzfosn', form.current, 'EpWQ1lGGXxO4pSPHj')
       .then((result) => {
           alert('message sent successfully')
-          
+          setloading(false)
       }, (error) => {
           alert('failed to send message error:', error)
+          setloading(false)
+
       });
     }
   return (
@@ -67,9 +70,13 @@ const Contact = () => {
               <textarea name="message" id="message" cols="30" rows="10" placeholder='Enter your message' required='true'></textarea>
               </Reveal>
               <Reveal>
-              <div className="button" style={{width:"25%", margin:"0 auto"}}>
-                <input type="submit" value={"Send"} placeholder='send'/>
-              </div>
+              {(loading)?(<div style={{display:"flex", justifyContent:"center", width:'100%', height:'60px'}}>
+                <img src={loader} />
+            </div>):
+              (<div className="button" style={{width:"25%", margin:"0 auto"}}>
+              <input type="submit" value={"Send"} placeholder='send'/>
+            </div>)}
+
               </Reveal>
             </form>
           </div>
